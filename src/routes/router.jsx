@@ -4,6 +4,8 @@ import Home from "../pages/Home";
 import { Profiler } from "react";
 import Profile from "../pages/Profile";
 import SkillDetails from "../pages/SkillDetails";
+import SignUp from "../pages/SignUp";
+import Login from "../pages/Login";
 
 const router = createBrowserRouter([
     {
@@ -26,11 +28,11 @@ const router = createBrowserRouter([
             },
             {
                 path: "/signup",
-                element: <h1>sign up</h1>
+                element: <SignUp></SignUp>
             },
             {
                 path: "/login",
-                element: <h1>login</h1>
+                element: <Login></Login>
             }
         ]
     }

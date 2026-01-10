@@ -35,7 +35,7 @@ const SkillCard = ({ skill }) => {
         <div className="card-actions justify-end">
           <Link
             to={`/skill-details/${skillId}`}
-            className="btn rounded-none rounded-b-lg w-full text-base bg-[#4a3aff40] text-[#4A3AFF] hover:bg-[#4A3AFF] hover:text-white overflow-hidden"
+            className="btn rounded-none rounded-b-lg w-full text-base bg-[#4a3aff40] text-primary hover:bg-primary hover:text-white overflow-hidden"
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
           >

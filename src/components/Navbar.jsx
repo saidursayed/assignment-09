@@ -7,11 +7,17 @@ import { CgProfile } from "react-icons/cg";
 const Navbar = () => {
   const links = (
     <>
-      <li className="text-lg">
-        <NavLink to="/"><AiOutlineHome/>Home</NavLink>
+      <li className="text-lg font-medium">
+        <NavLink to="/">
+          <AiOutlineHome />
+          Home
+        </NavLink>
       </li>
-      <li className="text-lg">
-        <NavLink to="/my-profile"><CgProfile />My Profile</NavLink>
+      <li className="text-lg font-medium">
+        <NavLink to="/my-profile">
+          <CgProfile />
+          My Profile
+        </NavLink>
       </li>
     </>
   );
@@ -51,9 +57,32 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{links}</ul>
         </div>
-        <div className="navbar-end">
-          <Link to="/signup" className="btn btn-primary">Sign Up</Link>
-          <Link to="/login" className="btn btn-outline">Login</Link>
+        <div className="navbar-end lg:flex gap-2">
+          <NavLink
+            to="/login"
+            className={({ isActive }) =>
+              `btn border-[1.5px] border-primary px-5 ${
+                isActive
+                  ? "bg-primary text-white"
+                  : "bg-white text-primary hover:bg-primary hover:text-white"
+              }`
+            }
+          >
+            Login
+          </NavLink>
+
+          <NavLink
+            to="/signup"
+            className={({ isActive }) =>
+              `btn border-[1.5px] border-primary px-5 ${
+                isActive
+                  ? "bg-primary text-white"
+                  : "bg-white text-primary hover:bg-primary hover:text-white"
+              }`
+            }
+          >
+            Sign Up
+          </NavLink>
         </div>
       </div>
     </div>

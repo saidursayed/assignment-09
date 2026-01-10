@@ -8,11 +8,15 @@
 @plugin "daisyui/theme" {
   name: "light";
   default: true;
-  --color-primary: blue;
-  --color-secondary: teal;
+  --color-primary: #4A3AFF;
+  --color-secondary: #6941D1;
 }
 
 
 * {
   font-family: "Inter", sans-serif;
+}
+
+a.active {
+  @apply text-blue-700;
 }
