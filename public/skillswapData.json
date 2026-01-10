@@ -4,24 +4,26 @@
     "skillName": "WordPress Website Development",
     "providerName": "Sara Hossain",
     "providerEmail": "sarahossain@skillswap.com",
+    "providerImage": "https://i.ibb.co.com/JFsFLGrv/team-1.webp",
     "price": 100,
     "rating": 4.9,
     "slotsAvailable": 2,
     "description": "Custom WordPress website design and development with responsive layout.",
     "image": "https://i.ibb.co.com/SX7gD5Km/Chat-GPT-Image-Jan-10-2026-10-45-10-AM.png",
-    "category": "Freelance"
+    "category": "WordPress"
   },
   {
     "skillId": 2,
     "skillName": "Graphic Design for Social Media",
     "providerName": "Nabila Karim",
     "providerEmail": "nabila@skillswap.com",
+    "providerImage": "https://i.ibb.co.com/XkCD5Qm4/team-5.webp",
     "price": 30,
-    "rating": 4.7,
+    "rating": 4.8,
     "slotsAvailable": 5,
     "description": "Eye‑catching social media graphics and banners for brands and businesses.",
     "image": "https://i.ibb.co.com/Xrf1xMx0/Chat-GPT-Image-Jan-10-2026-10-18-12-AM.jpg",
-    "category": "Freelance"
+    "category": "Graphic Design"
   },
   {
     "skillId": 3,
@@ -29,7 +31,7 @@
     "providerName": "Shakib Hasan",
     "providerEmail": "shakib@skillswap.com",
     "price": 50,
-    "rating": 4.8,
+    "rating": 4.5,
     "slotsAvailable": 3,
     "description": "Improve website ranking on Google with on‑page and off‑page SEO techniques.",
     "image": "https://i.ibb.co.com/VWB0ckVs/Chat-GPT-Image-Jan-10-2026-09-22-16-AM.png",
@@ -41,7 +43,7 @@
     "providerName": "Tania Rahman",
     "providerEmail": "tania@skillswap.com",
     "price": 25,
-    "rating": 4.9,
+    "rating": 4.2,
     "slotsAvailable": 4,
     "description": "Creative and professional logo design for startups and small businesses.",
     "image": "https://i.ibb.co.com/7JTr8HPm/Chat-GPT-Image-Jan-10-2026-10-24-59-AM.jpg",
@@ -53,7 +55,7 @@
     "providerName": "Fahim Chowdhury",
     "providerEmail": "fahim@skillswap.com",
     "price": 15,
-    "rating": 4.6,
+    "rating": 4.3,
     "slotsAvailable": 6,
     "description": "High‑quality content writing for blogs, websites, and marketing materials.",
     "image": "https://i.ibb.co.com/DDHNc2GT/Chat-GPT-Image-Jan-10-2026-10-27-30-AM.jpg",
@@ -65,7 +67,7 @@
     "providerName": "Arifa Sultana",
     "providerEmail": "arifa@skillswap.com",
     "price": 60,
-    "rating": 4.8,
+    "rating": 4.0,
     "slotsAvailable": 2,
     "description": "Professional video editing and motion graphics for YouTube and social media.",
     "image": "https://i.ibb.co.com/j9M05pn9/Chat-GPT-Image-Jan-10-2026-10-29-10-AM.jpg",
@@ -77,7 +79,7 @@
     "providerName": "Ayesha Khan",
     "providerEmail": "ayeshakhan@skillswap.com",
     "price": 40,
-    "rating": 4.7,
+    "rating": 4.0,
     "slotsAvailable": 3,
     "description": "Custom illustrations and digital art for books, websites, and brands.",
     "image": "https://i.ibb.co.com/QGrqYY2/Chat-GPT-Image-Jan-10-2026-10-31-00-AM.jpg",
@@ -88,12 +90,13 @@
     "skillName": "Social Media Management",
     "providerName": "Aarav Khan",
     "providerEmail": "aarav@skillswap.com",
+    "providerImage": "https://i.ibb.co.com/cKF05ryL/team-4.webp",
     "price": 70,
-    "rating": 4.8,
+    "rating": 4.9,
     "slotsAvailable": 2,
     "description": "Manage and grow social media accounts for businesses and influencers.",
     "image": "https://i.ibb.co.com/mrxY7WL4/Chat-GPT-Image-Jan-10-2026-10-35-49-AM.png",
-    "category": "Freelance"
+    "category": "Social Media"
   },
   {
     "skillId": 9,
@@ -101,7 +104,7 @@
     "providerName": "Zara Islam",
     "providerEmail": "zara@skillswap.com",
     "price": 120,
-    "rating": 4.9,
+    "rating": 4.7,
     "slotsAvailable": 1,
     "description": "Complete e‑commerce store setup with payment integration and product listing.",
     "image": "https://i.ibb.co.com/Qj6Y10vQ/Chat-GPT-Image-Jan-10-2026-10-37-16-AM.png",
@@ -112,12 +115,13 @@
     "skillName": "Mobile App UI/UX Design",
     "providerName": "Arhaan",
     "providerEmail": "arhaan@skillswap.com",
+    "providerImage": "https://skillhub-react.vercel.app/assets/imgs/team/team-6.webp",
     "price": 80,
-    "rating": 4.7,
+    "rating": 4.8,
     "slotsAvailable": 3,
     "description": "User‑friendly and modern UI/UX design for iOS and Android apps.",
     "image": "https://i.ibb.co.com/qF4XP7Hc/Chat-GPT-Image-Jan-10-2026-10-38-23-AM.png",
-    "category": "Freelance"
+    "category": "UI/UX Design"
   },
   {
     "skillId": 11,
@@ -125,34 +129,22 @@
     "providerName": "Rafatul Islam",
     "providerEmail": "rafatul@skillswap.com",
     "price": 90,
-    "rating": 4.8,
+    "rating": 4.6,
     "slotsAvailable": 2,
     "description": "Python scripts for automation, web scraping, and data analysis tasks.",
     "image": "https://i.ibb.co.com/S7V6R6Kr/Chat-GPT-Image-Jan-10-2026-10-40-51-AM.png",
     "category": "Freelance"
   },
-   {
+  {
     "skillId": 12,
     "skillName": "Email Marketing Automation",
     "providerName": "Minhaz Ali",
     "providerEmail": "minhaz@skillswap.com",
     "price": 65,
-    "rating": 4.9,
+    "rating": 4.4,
     "slotsAvailable": 4,
     "description": "Design automated email sequences to boost engagement and sales.",
     "image": "https://i.ibb.co.com/NnLcGfx3/Chat-GPT-Image-Jan-10-2026-10-43-22-AM.png",
-    "category": "Freelance"
-  },
-   {
-    "skillId": 13,
-    "skillName": "Facebook Ads Campaign Management",
-    "providerName": "Arif Rahman",
-    "providerEmail": "arif@skillswap.com",
-    "price": 55,
-    "rating": 4.7,
-    "slotsAvailable": 3,
-    "description": "Create and manage effective Facebook ad campaigns for maximum ROI.",
-    "image": "https://i.ibb.co.com/JwSMhGr0/Chat-GPT-Image-Jan-10-2026-10-46-17-AM.png",
     "category": "Freelance"
   }
 ]

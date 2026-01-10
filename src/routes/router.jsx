@@ -23,6 +23,14 @@ const router = createBrowserRouter([
                 path: "/skill-details/:id",
                 element: <SkillDetails></SkillDetails>,
                 loader: () => fetch("/skillswapData.json")
+            },
+            {
+                path: "/signup",
+                element: <h1>sign up</h1>
+            },
+            {
+                path: "/login",
+                element: <h1>login</h1>
             }
         ]
     }

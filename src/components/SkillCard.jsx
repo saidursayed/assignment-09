@@ -8,12 +8,12 @@ const SkillCard = ({ skill }) => {
   const [hovered, setHovered] = useState(false);
 
   return (
-    <div data-aos="zoom-in-up" className="card bg-white w-96 shadow-sm">
+    <div data-aos="zoom-in-up" className="card bg-white shadow-sm">
       <figure>
         <img src={image} alt="Shoes" className="w-full" />
       </figure>
       <div>
-        <div className="card-body">
+        <div className="card-body p-3">
           <h2 className="card-title text-xl font-semibold">{skillName}</h2>
           <div className="flex justify-between items-center">
             <div className="flex items-center gap-1 text-orange-400">

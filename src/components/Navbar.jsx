@@ -1,15 +1,17 @@
 import React from "react";
 import { Link, NavLink } from "react-router";
 import logo from "../assets/SkillSwap.png";
+import { AiOutlineHome } from "react-icons/ai";
+import { CgProfile } from "react-icons/cg";
 
 const Navbar = () => {
   const links = (
     <>
       <li className="text-lg">
-        <NavLink to="/">Home</NavLink>
+        <NavLink to="/"><AiOutlineHome/>Home</NavLink>
       </li>
       <li className="text-lg">
-        <NavLink to="/my-profile">My Profile</NavLink>
+        <NavLink to="/my-profile"><CgProfile />My Profile</NavLink>
       </li>
     </>
   );
@@ -50,7 +52,8 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1">{links}</ul>
         </div>
         <div className="navbar-end">
-          <a className="btn">Button</a>
+          <Link to="/signup" className="btn btn-primary">Sign Up</Link>
+          <Link to="/login" className="btn btn-outline">Login</Link>
         </div>
       </div>
     </div>
