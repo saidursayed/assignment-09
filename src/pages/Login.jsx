@@ -1,16 +1,52 @@
-import React, { useState } from "react";
+import React, { use, useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
-import { Link } from "react-router";
+import { Link, useLocation, useNavigate } from "react-router";
+import { AuthContext } from "../context/AuthContext";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
+
+  const { signIn, googleSignIn } = use(AuthContext);
+  const location = useLocation();
+  const navigate = useNavigate();
+  const from = location.state || "/";
+  console.log(location);
+
   const handleLogin = (e) => {
     e.preventDefault();
     const form = e.target;
     const email = form.email.value;
     const password = form.password.value;
     console.log(email, password);
+
+    signIn(email, password)
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+         navigate(from);
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        alert(errorCode, errorMessage);
+        // setError(errorCode);
+      });
+  };
+
+  const handleGoogleSignIn = () => {
+    // console.log("sing in with google");
+    googleSignIn()
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+        // alert("Google Sign In Successful");
+        navigate(from);
+      })
+      .catch((error) => {
+        console.error(error);
+        alert(error.message);
+      });
   };
 
   const handleTogglePasswordShow = (event) => {
@@ -73,9 +109,12 @@ const Login = () => {
           </fieldset>
         </form>
         <div className="card-body py-0">
-          <button className="btn mt-2 text-base text-gray-600">
-            <FcGoogle size={24} />
-            Sign in With Google
+          <button
+            onClick={handleGoogleSignIn}
+            className="btn mt-2 text-gray-600"
+          >
+            <FcGoogle size={22} />
+            Continue With Google
           </button>
 
           <p className="font-semibold text-gray-600 text-center text-xs pt-5">

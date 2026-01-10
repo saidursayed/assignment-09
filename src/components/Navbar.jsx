@@ -1,10 +1,23 @@
-import React from "react";
+import React, { use } from "react";
 import { Link, NavLink } from "react-router";
 import logo from "../assets/SkillSwap.png";
 import { AiOutlineHome } from "react-icons/ai";
 import { CgProfile } from "react-icons/cg";
+import { AuthContext } from "../context/AuthContext";
 
 const Navbar = () => {
+  const { user, logOut } = use(AuthContext);
+
+  const handleLogOut = () => {
+    // console.log("logout")
+    logOut()
+      .then(() => {
+        alert("You Logged Out successfully");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
   const links = (
     <>
       <li className="text-lg font-medium">
@@ -57,32 +70,46 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{links}</ul>
         </div>
-        <div className="navbar-end lg:flex gap-2">
-          <NavLink
-            to="/login"
-            className={({ isActive }) =>
-              `btn border-[1.5px] border-primary px-5 ${
-                isActive
-                  ? "bg-primary text-white"
-                  : "bg-white text-primary hover:bg-primary hover:text-white"
-              }`
-            }
-          >
-            Login
-          </NavLink>
 
-          <NavLink
-            to="/signup"
-            className={({ isActive }) =>
-              `btn border-[1.5px] border-primary px-5 ${
-                isActive
-                  ? "bg-primary text-white"
-                  : "bg-white text-primary hover:bg-primary hover:text-white"
-              }`
-            }
-          >
-            Sign Up
-          </NavLink>
+        <div className="navbar-end ">
+          <img
+            className="w-10 rounded-full mr-4"
+            src={`${user ?  user.photoURL : null}`}
+            alt=""
+          />
+          {user ? (
+            <button onClick={handleLogOut} className="btn btn-primary px-10">
+              LogOut
+            </button>
+          ) : (
+            <div className=" lg:flex gap-2">
+              <NavLink
+                to="/login"
+                className={({ isActive }) =>
+                  `btn border-[1.5px] border-primary px-5 ${
+                    isActive
+                      ? "bg-primary text-white"
+                      : "bg-white text-primary hover:bg-primary hover:text-white"
+                  }`
+                }
+              >
+                Login
+              </NavLink>
+
+              <NavLink
+                to="/signup"
+                className={({ isActive }) =>
+                  `btn border-[1.5px] border-primary px-5 ${
+                    isActive
+                      ? "bg-primary text-white"
+                      : "bg-white text-primary hover:bg-primary hover:text-white"
+                  }`
+                }
+              >
+                Sign Up
+              </NavLink>
+            </div>
+          )}
         </div>
       </div>
     </div>
