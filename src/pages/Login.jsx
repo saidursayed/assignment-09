@@ -6,12 +6,18 @@ import { AuthContext } from "../context/AuthContext";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
+  const [error, setError] = useState("");
 
   const { signIn, googleSignIn } = use(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
   const from = location.state || "/";
   console.log(location);
+
+  const handleTogglePasswordShow = (event) => {
+    event.preventDefault();
+    setShowPassword(!showPassword);
+  };
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -20,17 +26,27 @@ const Login = () => {
     const password = form.password.value;
     console.log(email, password);
 
+    // const passwordRegex =
+    //   /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#^()\-_=+])[A-Za-z\d@$!%*?&#^()\-_=+]{8,}$/;
+
+    // if (!passwordRegex.test(password)) {
+    //   setError(
+    //     "Password must be at least 8 characters long and include at least one uppercase letter, one lowercase letter, one number, and one special character."
+    //   );
+    //   return;
+    // }
+
     signIn(email, password)
       .then((result) => {
         const user = result.user;
         console.log(user);
-         navigate(from);
+        navigate(from);
       })
       .catch((error) => {
-        const errorCode = error.code;
+        // const errorCode = error.code;
         const errorMessage = error.message;
-        alert(errorCode, errorMessage);
-        // setError(errorCode);
+        // alert(errorCode, errorMessage);
+        setError(errorMessage);
       });
   };
 
@@ -47,11 +63,6 @@ const Login = () => {
         console.error(error);
         alert(error.message);
       });
-  };
-
-  const handleTogglePasswordShow = (event) => {
-    event.preventDefault();
-    setShowPassword(!showPassword);
   };
 
   return (
@@ -100,6 +111,9 @@ const Login = () => {
                 Forgot password?
               </Link>
             </div>
+            {error && (
+              <p className="text-red-500 text-xs font-medium mt-1">{error}</p>
+            )}
             <button
               type="submit"
               className="btn bg-[#7F56D9] hover:bg-secondary text-white text-base mt-2"

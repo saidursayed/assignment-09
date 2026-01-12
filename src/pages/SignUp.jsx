@@ -6,8 +6,14 @@ import { AuthContext } from "../context/AuthContext";
 
 const SignUp = () => {
   const [showPassword, setShowPassword] = useState(false);
+  const [error, setError] = useState("");
   const { updateUser, setUser, createUser, googleSignIn } = use(AuthContext);
   const navigate = useNavigate();
+
+  const handleTogglePasswordShow = (event) => {
+    event.preventDefault();
+    setShowPassword(!showPassword);
+  };
 
   const handleSignUp = (e) => {
     e.preventDefault();
@@ -17,6 +23,16 @@ const SignUp = () => {
     const email = form.email.value;
     const password = form.password.value;
     console.log(name, photo, email, password);
+
+    const passwordRegex =
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#^()\-_=+])[A-Za-z\d@$!%*?&#^()\-_=+]{8,}$/;
+
+    if (!passwordRegex.test(password)) {
+      setError(
+        "Password must be at least 8 characters long and include at least one uppercase letter, one lowercase letter, one number, and one special character."
+      );
+      return;
+    }
 
     createUser(email, password)
       .then((result) => {
@@ -57,19 +73,12 @@ const SignUp = () => {
       });
   };
 
-  const handleTogglePasswordShow = (event) => {
-    event.preventDefault();
-    setShowPassword(!showPassword);
-  };
   return (
     <div className="flex justify-center min-h-screen items-center">
       <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl px-3 py-6">
         <h2 className="font-semibold text-3xl text-center">
           Create an account
         </h2>
-        {/* <p className="text-gray-500 text-center font-medium mt-2 text-sm ">
-          Welcome back! Please enter your details.
-        </p> */}
         <form onSubmit={handleSignUp} className="card-body py-0 mt-4">
           <fieldset className="fieldset">
             {/* Name */}
@@ -116,6 +125,7 @@ const SignUp = () => {
                 {showPassword ? <FaEyeSlash /> : <FaEye />}
               </button>
             </div>
+            {error && <p className="text-red-500 text-xs font-medium mt-1">{error}</p>}
 
             <button
               type="submit"
@@ -126,7 +136,10 @@ const SignUp = () => {
           </fieldset>
         </form>
         <div className="card-body py-0">
-          <button onClick={handleGoogleSignIn} className="btn mt-2 text-gray-600">
+          <button
+            onClick={handleGoogleSignIn}
+            className="btn mt-2 text-gray-600"
+          >
             <FcGoogle size={22} />
             Continue With Google
           </button>
