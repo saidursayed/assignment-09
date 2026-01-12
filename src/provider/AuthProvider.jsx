@@ -27,6 +27,10 @@ const AuthProvider = ({ children }) => {
   const updateUser = (updateData) => {
     return updateProfile(auth.currentUser, updateData);
   };
+ 
+const editUserProfile = (name, photo ) => {
+  return updateProfile(auth.currentUser, {displayName: name, photoURL: photo})
+};
 
   const signIn = (email, password) => {
     setLoading(true);
@@ -62,6 +66,7 @@ const AuthProvider = ({ children }) => {
     loading,
     setLoading,
     logOut,
+    editUserProfile
   };
   return <AuthContext value={authData}>{children}</AuthContext>;
 };

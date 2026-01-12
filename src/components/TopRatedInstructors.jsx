@@ -18,7 +18,7 @@ const TopRatedInstructors = ({ data }) => {
       <div className="flex justify-between gap-5">
         {topRatedIns.map((ins) => (
           <div
-            key={ins.id}
+            key={ins.skillId}
             className="transform transition duration-300 hover:scale-105 hover:shadow-x rounded-2xl"
           >
             <div className="card rounded-2xl h-80 bg-base-100 shadow-sm">
