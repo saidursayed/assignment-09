@@ -1,27 +1,29 @@
 import React, { use } from "react";
 import { FaArrowLeft } from "react-icons/fa";
-import { Link, useNavigate } from "react-router";
+import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../context/AuthContext";
+import toast from "react-hot-toast";
 
 const ForgetPassword = () => {
   const { ForgetPassword } = use(AuthContext);
   const navigate = useNavigate();
+  const location = useLocation();
+  const prefilledEmail = location.state?.email || "";
+
   const handleResetPassword = (e) => {
     e.preventDefault();
     const form = e.target;
     const email = form.email.value;
-    console.log(email);
+
     ForgetPassword(email)
       .then(() => {
-        alert("Password reset link sent! Please check your email.");
+        toast.success("Password reset link sent! Please check your email.");
         window.open("https://mail.google.com/mail/u/0/", "_blank");
-        navigate("/login")
+        navigate("/login");
       })
       .catch((error) => {
-        const errorCode = error.code;
         const errorMessage = error.message;
-        alert(errorCode, errorMessage);
-        // ..
+        toast.error(errorMessage);
       });
   };
 
@@ -41,6 +43,7 @@ const ForgetPassword = () => {
               type="email"
               className="input outline-secondary focus:border-0"
               placeholder="Enter your email"
+              defaultValue={prefilledEmail}
               required
             />
             <button

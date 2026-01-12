@@ -4,18 +4,19 @@ import logo from "../assets/SkillSwap.png";
 import { AiOutlineHome } from "react-icons/ai";
 import { CgProfile } from "react-icons/cg";
 import { AuthContext } from "../context/AuthContext";
+import toast from "react-hot-toast";
 
 const Navbar = () => {
   const { user, logOut } = use(AuthContext);
 
   const handleLogOut = () => {
-    // console.log("logout")
     logOut()
       .then(() => {
-        alert("You Logged Out successfully");
+        // alert("You Logged Out successfully");
+        toast.success("You Logged Out successfully");
       })
       .catch((error) => {
-        console.log(error);
+        toast.error(error.message);
       });
   };
   const links = (
@@ -72,13 +73,25 @@ const Navbar = () => {
         </div>
 
         <div className="navbar-end ">
-          <img
-            className="w-10 rounded-full mr-4"
-            src={`${user ?  user.photoURL : null}`}
-            alt=""
-          />
+          {user && (
+            <Link to="/my-profile">
+              <div className="relative group">
+                <img
+                  className="w-10 h-10 rounded-full mr-4"
+                  src={user.photoURL}
+                  alt=""
+                />
+                <div className="absolute left-0 mt-5 w-36 bg-white shadow-lg rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="px-4 py-2 text-sm text-blue-600">
+                    {user.displayName}
+                  </p>
+                </div>
+              </div>
+            </Link>
+          )}
+
           {user ? (
-            <button onClick={handleLogOut} className="btn btn-primary px-10">
+            <button onClick={handleLogOut} className="btn bg-primary text-white border-[1.5px] border-primary hover:bg-white hover:text-primary px-5">
               LogOut
             </button>
           ) : (

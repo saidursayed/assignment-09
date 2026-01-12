@@ -1,13 +1,12 @@
 import React, { use, useState } from "react";
 import { AuthContext } from "../context/AuthContext";
-import { Link } from "react-router";
-import { FaEdit } from "react-icons/fa";
 import Loading from "../components/Loading";
+import toast from "react-hot-toast";
 
 const Profile = () => {
   const { user, editUserProfile } = use(AuthContext);
   const [loading, setLoading] = useState(false);
-  console.log(user);
+
   const name = user.displayName || user.providerData?.[0]?.displayName;
   const email = user.email || user.providerData?.[0]?.email;
   const photo = user.photoURL || user.providerData?.[0]?.photoURL;
@@ -17,23 +16,18 @@ const Profile = () => {
     const form = e.target;
     const name = form.name.value;
     const photo = form.photo.value;
-    console.log(name, photo);
 
     setLoading(true);
     editUserProfile(name, photo)
       .then(() => {
-        // Profile updated!
-        // ...
+        toast.success("Profile updated successfully!");
         setLoading(false);
         document.getElementById("my_modal_5").close();
         form.reset()
       })
       .catch((error) => {
-        // An error occurred
-        // ...
-
         setLoading(false);
-        console.log(error);
+        toast.error(error.errorMessage);
       });
   };
 
@@ -86,7 +80,6 @@ const Profile = () => {
 
         {/* Action */}
         <div className="mt-8">
-          {/* Open the modal using document.getElementById('ID').showModal() method */}
           <button
             className="bg-blue-600 text-white px-6 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition"
             onClick={() => document.getElementById("my_modal_5").showModal()}
@@ -116,7 +109,7 @@ const Profile = () => {
                       type="text"
                       className="input w-full outline-secondary focus:border-0"
                       placeholder="Enter your name"
-                      required
+                      
                     />
                     {/* Photo URL */}
                     <label className="label text-base text-gray-600">
@@ -127,7 +120,7 @@ const Profile = () => {
                       type="text"
                       className="input w-full outline-secondary focus:border-0"
                       placeholder="Enter your photo URL"
-                      required
+                      
                     />
 
                     <div className="flex items-center gap-4 mt-2">

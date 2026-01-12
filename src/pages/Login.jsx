@@ -3,19 +3,19 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../context/AuthContext";
+import toast from "react-hot-toast";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState("");
-
+  const [formEmail, setFormEmail] = useState("");
   const { signIn, googleSignIn } = use(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
   const from = location.state || "/";
-  console.log(location);
 
-  const handleTogglePasswordShow = (event) => {
-    event.preventDefault();
+  const handleTogglePasswordShow = (e) => {
+    e.preventDefault();
     setShowPassword(!showPassword);
   };
 
@@ -24,49 +24,33 @@ const Login = () => {
     const form = e.target;
     const email = form.email.value;
     const password = form.password.value;
-    console.log(email, password);
-
-    // const passwordRegex =
-    //   /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#^()\-_=+])[A-Za-z\d@$!%*?&#^()\-_=+]{8,}$/;
-
-    // if (!passwordRegex.test(password)) {
-    //   setError(
-    //     "Password must be at least 8 characters long and include at least one uppercase letter, one lowercase letter, one number, and one special character."
-    //   );
-    //   return;
-    // }
 
     signIn(email, password)
-      .then((result) => {
-        const user = result.user;
-        console.log(user);
+      .then(() => {
+        toast.success("Login Successful!");
         navigate(from);
       })
       .catch((error) => {
-        // const errorCode = error.code;
         const errorMessage = error.message;
-        // alert(errorCode, errorMessage);
+        toast.error(errorMessage);
         setError(errorMessage);
       });
   };
 
   const handleGoogleSignIn = () => {
-    // console.log("sing in with google");
     googleSignIn()
-      .then((result) => {
-        const user = result.user;
-        console.log(user);
-        // alert("Google Sign In Successful");
+      .then(() => {
+        toast.success("Signed in with Google successfully!");
         navigate(from);
       })
       .catch((error) => {
-        console.error(error);
-        alert(error.message);
+        const errorMessage = error.message;
+        toast.error(errorMessage);
       });
   };
 
   return (
-    <div className="flex justify-center min-h-screen items-center">
+    <div className="flex justify-center items-center ">
       <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl px-3 py-6">
         <h2 className="font-semibold text-3xl text-center">
           Log in to your account
@@ -83,6 +67,8 @@ const Login = () => {
               type="email"
               className="input outline-secondary focus:border-0"
               placeholder="Enter your email"
+              value={formEmail}
+              onChange={(e) => setFormEmail(e.target.value)}
               required
             />
             {/* password */}
@@ -106,6 +92,7 @@ const Login = () => {
             <div>
               <Link
                 to="/forgot-password"
+                state={{ email: formEmail }}
                 className="text-secondary link link-hover font-semibold"
               >
                 Forgot password?

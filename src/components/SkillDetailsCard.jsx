@@ -1,8 +1,14 @@
 import React from "react";
+import toast from "react-hot-toast";
 import { FaStar } from "react-icons/fa";
-import { Link } from "react-router-dom";
 
 const SkillDetailsCard = ({ skill }) => {
+  const handleBookSession = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    toast.success("Your session has been successfully booked.");
+    form.reset();
+  };
   return (
     <div className="my-20 grid grid-cols-12 gap-10 items-start">
       <div className="col-span-8">
@@ -65,7 +71,7 @@ const SkillDetailsCard = ({ skill }) => {
       <div className="col-span-4">
         <div className="max-w-md mx-auto bg-white p-6 rounded-lg shadow-lg">
           <h2 className="text-2xl font-bold mb-4">Book a Session</h2>
-          <form className="flex flex-col gap-4">
+          <form onSubmit={handleBookSession} className="flex flex-col gap-4">
             <div>
               <label className="block mb-1 font-medium" htmlFor="name">
                 Name

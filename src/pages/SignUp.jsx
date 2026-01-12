@@ -3,6 +3,7 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { Link, useNavigate } from "react-router";
 import { AuthContext } from "../context/AuthContext";
+import toast from "react-hot-toast";
 
 const SignUp = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -22,7 +23,6 @@ const SignUp = () => {
     const photo = form.photo.value;
     const email = form.email.value;
     const password = form.password.value;
-    console.log(name, photo, email, password);
 
     const passwordRegex =
       /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#^()\-_=+])[A-Za-z\d@$!%*?&#^()\-_=+]{8,}$/;
@@ -37,39 +37,33 @@ const SignUp = () => {
     createUser(email, password)
       .then((result) => {
         const user = result.user;
-        console.log(user);
         updateUser({
           displayName: name,
           photoURL: photo,
         })
           .then(() => {
+            toast.success("Account Created Successfully!");
             setUser({ ...user, displayName: name, photoURL: photo });
             navigate("/");
           })
           .catch((error) => {
-            console.log(error);
+            toast.error(`${error.message}`);
             setUser(user);
           });
       })
       .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        alert(errorMessage, errorCode);
+        toast.error(`Signup Failed ${error.message}`);
       });
   };
 
   const handleGoogleSignIn = () => {
-    console.log("sing in with google");
     googleSignIn()
-      .then((result) => {
-        const user = result.user;
-        console.log(user);
-        alert("Google Sign In Successful");
+      .then(() => {
+        toast.success("Signed in with Google successfully!");
         navigate("/");
       })
       .catch((error) => {
-        console.error(error);
-        alert(error.message);
+        toast.error(`Google Sign-In Failed: ${error.message}`);
       });
   };
 
@@ -79,8 +73,8 @@ const SignUp = () => {
         <h2 className="font-semibold text-3xl text-center">
           Create an account
         </h2>
-         <p className="text-gray-500 text-center font-medium mt-2 text-sm ">
-            Join SkillSwap and start exchanging skills.
+        <p className="text-gray-500 text-center font-medium mt-2 text-sm ">
+          Join SkillSwap and start exchanging skills.
         </p>
         <form onSubmit={handleSignUp} className="card-body py-0 mt-4">
           <fieldset className="fieldset">
@@ -128,7 +122,9 @@ const SignUp = () => {
                 {showPassword ? <FaEyeSlash /> : <FaEye />}
               </button>
             </div>
-            {error && <p className="text-red-500 text-xs font-medium mt-1">{error}</p>}
+            {error && (
+              <p className="text-red-500 text-xs font-medium mt-1">{error}</p>
+            )}
 
             <button
               type="submit"
