@@ -79,6 +79,9 @@ const SignUp = () => {
         <h2 className="font-semibold text-3xl text-center">
           Create an account
         </h2>
+         <p className="text-gray-500 text-center font-medium mt-2 text-sm ">
+            Join SkillSwap and start exchanging skills.
+        </p>
         <form onSubmit={handleSignUp} className="card-body py-0 mt-4">
           <fieldset className="fieldset">
             {/* Name */}

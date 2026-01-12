@@ -4,6 +4,7 @@ import {
   getAuth,
   GoogleAuthProvider,
   onAuthStateChanged,
+  sendPasswordResetEmail,
   signInWithEmailAndPassword,
   signInWithPopup,
   signOut,
@@ -27,10 +28,13 @@ const AuthProvider = ({ children }) => {
   const updateUser = (updateData) => {
     return updateProfile(auth.currentUser, updateData);
   };
- 
-const editUserProfile = (name, photo ) => {
-  return updateProfile(auth.currentUser, {displayName: name, photoURL: photo})
-};
+
+  const editUserProfile = (name, photo) => {
+    return updateProfile(auth.currentUser, {
+      displayName: name,
+      photoURL: photo,
+    });
+  };
 
   const signIn = (email, password) => {
     setLoading(true);
@@ -38,8 +42,12 @@ const editUserProfile = (name, photo ) => {
   };
 
   const googleSignIn = () => {
-      setLoading(true);
+    setLoading(true);
     return signInWithPopup(auth, googleProvider);
+  };
+
+  const ForgetPassword = (email) => {
+    return sendPasswordResetEmail(auth, email);
   };
 
   const logOut = () => {
@@ -49,7 +57,7 @@ const editUserProfile = (name, photo ) => {
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
-        setLoading(false);
+      setLoading(false);
     });
     return () => {
       unsubscribe();
@@ -66,7 +74,8 @@ const editUserProfile = (name, photo ) => {
     loading,
     setLoading,
     logOut,
-    editUserProfile
+    editUserProfile,
+    ForgetPassword
   };
   return <AuthContext value={authData}>{children}</AuthContext>;
 };
