@@ -10,7 +10,7 @@ const SkillCard = ({ skill }) => {
   return (
     <div data-aos="zoom-in-up" className="card bg-white shadow-sm">
       <figure>
-        <img src={image} alt="Shoes" className="w-full" />
+        <img src={image} alt="" className="w-full" />
       </figure>
       <div>
         <div className="card-body p-3">

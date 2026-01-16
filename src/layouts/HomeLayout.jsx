@@ -11,8 +11,8 @@ const HomeLayout = () => {
           <Navbar></Navbar>
         </nav>
       </header>
-      <main className="pt-16 mt-12.5 flex-1 bg-linear-to-br from-[#ffecec] via-[#edf1ff] to-[#fff6d6] p-6" >
-        <section className="w-11/12 mx-auto min-h-screen">
+      <main className="mt-10 md:mt-12.5 flex-1 bg-linear-to-br from-[#ffecec] via-[#edf1ff] to-[#fff6d6] p-6 md:p-0" >
+        <section className="md:w-11/12 mx-auto min-h-screen">
           <Outlet></Outlet>
         </section>
       </main>

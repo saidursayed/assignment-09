@@ -1,7 +1,6 @@
 import { createBrowserRouter } from "react-router";
 import HomeLayout from "../layouts/HomeLayout";
 import Home from "../pages/Home";
-import { Profiler } from "react";
 import Profile from "../pages/Profile";
 import SkillDetails from "../pages/SkillDetails";
 import SignUp from "../pages/SignUp";
@@ -9,6 +8,7 @@ import Login from "../pages/Login";
 import PrivateRoute from "../provider/PrivateRoute";
 import Loading from "../components/Loading";
 import ForgetPassword from "../pages/ForgetPassword";
+import ErrorPage from "../components/ErrorPage";
 
 const router = createBrowserRouter([
   {
@@ -50,7 +50,11 @@ const router = createBrowserRouter([
       {
         path: "/forgot-password",
         element: <ForgetPassword></ForgetPassword>,
-      }
+      },
+      {
+        path: "*",
+        element: <ErrorPage></ErrorPage>,
+      },
     ],
   },
 ]);

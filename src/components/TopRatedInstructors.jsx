@@ -10,26 +10,26 @@ const TopRatedInstructors = ({ data }) => {
   }, [data]);
 
   return (
-    <div className="my-20">
-      <h2 className="text-center text-3xl font-bold mb-10">
+    <div className="my-5 md:my-10">
+      <h2 className="text-center text-2xl md:text-3xl font-bold mb-5 md:mb-10">
         Top Rated Instructors
       </h2>
 
-      <div className="flex justify-between gap-5">
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
         {topRatedIns.map((ins) => (
           <div
             key={ins.skillId}
             className="transform transition duration-300 hover:scale-105 hover:shadow-x rounded-2xl"
           >
-            <div className="card rounded-2xl h-80 bg-base-100 shadow-sm">
+            <div className="card rounded-2xl h-80 bg-base-100 shadow-sm"  data-aos="zoom-in">
               <figure className="px-10 pt-10 bg-linear-to-b from-[#F7E64A] via-[#A6D93B] to-[#2DB84D] overflow-hidden">
                 <img
                   src={ins.providerImage}
-                  alt="Shoes"
-                  className="rounded-xl"
+                  alt=""
+                  className="w-5/6 pt-16 lg:pt-0"
                 />
               </figure>
-              <div className="card-body rounded-2xl bg-[#EFF1FA]">
+              <div className="card-body rounded-b-2xl bg-[#EFF1FA]">
                 <h2 className="card-title text-xl">{ins.providerName}</h2>
                 <p>{ins.category} Expert</p>
 

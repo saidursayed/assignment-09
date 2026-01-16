@@ -12,7 +12,6 @@ const Navbar = () => {
   const handleLogOut = () => {
     logOut()
       .then(() => {
-        // alert("You Logged Out successfully");
         toast.success("You Logged Out successfully");
       })
       .catch((error) => {
@@ -37,10 +36,14 @@ const Navbar = () => {
   );
   return (
     <div className="bg-base-100 shadow-sm fixed top-0 left-0 w-full z-50">
-      <div className="navbar w-11/12 mx-auto">
+      <div className="navbar p-0 md:w-11/12 mx-auto px-6 md:px-0">
         <div className="navbar-start">
           <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+            <div
+              tabIndex={0}
+              role="button"
+              className="btn p-2.5 btn-ghost lg:hidden"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -65,7 +68,7 @@ const Navbar = () => {
             </ul>
           </div>
           <Link to="/">
-            <img className="max-w-48" src={logo} alt="" />
+            <img className="md:max-w-44" src={logo} alt="" />
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
@@ -75,13 +78,13 @@ const Navbar = () => {
         <div className="navbar-end ">
           {user && (
             <Link to="/my-profile">
-              <div className="relative group">
+              <div className="relative">
                 <img
-                  className="w-10 h-10 rounded-full mr-4"
+                  className="w-10 h-10 rounded-full mr-4 peer cursor-pointer"
                   src={user.photoURL}
                   alt=""
                 />
-                <div className="absolute left-0 mt-5 w-36 bg-white shadow-lg rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute left-0 mt-4 w-36 block bg-white shadow-lg rounded-md opacity-0 peer-hover:opacity-100 transition-opacity duration-300">
                   <p className="px-4 py-2 text-sm text-blue-600">
                     {user.displayName}
                   </p>
@@ -91,15 +94,18 @@ const Navbar = () => {
           )}
 
           {user ? (
-            <button onClick={handleLogOut} className="btn bg-primary text-white border-[1.5px] border-primary hover:bg-white hover:text-primary px-5">
+            <button
+              onClick={handleLogOut}
+              className="btn bg-primary text-white border-[1.5px] border-primary hover:bg-white hover:text-primary px-5"
+            >
               LogOut
             </button>
           ) : (
-            <div className=" lg:flex gap-2">
+            <div className="flex gap-1 md:gap-2">
               <NavLink
                 to="/login"
                 className={({ isActive }) =>
-                  `btn border-[1.5px] border-primary px-5 ${
+                  `btn btn-sm md:btn-md border-[1.5px] border-primary md:px-5 ${
                     isActive
                       ? "bg-primary text-white"
                       : "bg-white text-primary hover:bg-primary hover:text-white"
@@ -112,7 +118,7 @@ const Navbar = () => {
               <NavLink
                 to="/signup"
                 className={({ isActive }) =>
-                  `btn border-[1.5px] border-primary px-5 ${
+                  `btn btn-sm md:btn-md border-[1.5px] border-primary md:px-5 ${
                     isActive
                       ? "bg-primary text-white"
                       : "bg-white text-primary hover:bg-primary hover:text-white"

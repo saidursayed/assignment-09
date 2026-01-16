@@ -10,7 +10,7 @@ const Home = () => {
     const data = useLoaderData();
     return (
         <div>
-            <HeroSlider></HeroSlider>
+            <HeroSlider data={data}></HeroSlider>
             <PopularSkills data={data}></PopularSkills>
             <TopRatedInstructors data={data}></TopRatedInstructors>
             <HowItWorks></HowItWorks>

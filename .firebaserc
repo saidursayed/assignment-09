@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "default": "skillswap-ph",
+    "firebase use --add": "skillswap-ph"
+  },
+  "targets": {},
+  "etags": {}
+}

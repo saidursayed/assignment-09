@@ -7,9 +7,10 @@
     "providerImage": "https://i.ibb.co.com/JFsFLGrv/team-1.webp",
     "price": 100,
     "rating": 4.9,
-    "slotsAvailable": 2,
-    "description": "Custom WordPress website design and development with responsive layout.",
+    "slotsAvailable": 9,
+    "description": "Learn how to design and develop modern, fully responsive websites using WordPress. This course covers theme customization, plugin integration, and performance optimization. You’ll build real-world websites with SEO-friendly structure and secure functionality. Perfect for beginners and aspiring web developers who want practical, hands-on experience. No prior coding knowledge required.",
     "image": "https://i.ibb.co.com/SX7gD5Km/Chat-GPT-Image-Jan-10-2026-10-45-10-AM.png",
+    "bannerImage": "https://i.ibb.co.com/KzctdG5d/1.png",
     "category": "WordPress"
   },
   {
@@ -20,9 +21,10 @@
     "providerImage": "https://i.ibb.co.com/XkCD5Qm4/team-5.webp",
     "price": 30,
     "rating": 4.8,
-    "slotsAvailable": 5,
-    "description": "Eye‑catching social media graphics and banners for brands and businesses.",
+    "slotsAvailable": 12,
+    "description": "Learn how to create eye-catching visuals for social media platforms using modern design principles. This course covers layout, color theory, typography, and branding for digital content. You’ll design posts, banners, and ads optimized for engagement. Ideal for beginners, marketers, and content creators. By the end, you’ll confidently design scroll-stopping social media graphics.",
     "image": "https://i.ibb.co.com/Xrf1xMx0/Chat-GPT-Image-Jan-10-2026-10-18-12-AM.jpg",
+    "bannerImage": "https://i.ibb.co.com/kVVh9HYM/2.png",
     "category": "Graphic Design"
   },
   {
@@ -30,60 +32,70 @@
     "skillName": "SEO Optimization",
     "providerName": "Shakib Hasan",
     "providerEmail": "shakib@skillswap.com",
+    "providerImage": "https://i.ibb.co.com/VY0Pccn8/team-2.webp",
     "price": 50,
     "rating": 4.5,
-    "slotsAvailable": 3,
-    "description": "Improve website ranking on Google with on‑page and off‑page SEO techniques.",
+    "slotsAvailable": 8,
+    "description": "Learn how to improve website visibility and rank higher on search engines. This course covers keyword research, on-page and technical SEO, and content optimization strategies. You’ll gain practical skills to drive organic traffic and analyze performance. Ideal for beginners, marketers, and website owners. By the end, you’ll be able to implement effective SEO strategies with confidence.",
     "image": "https://i.ibb.co.com/VWB0ckVs/Chat-GPT-Image-Jan-10-2026-09-22-16-AM.png",
-    "category": "Freelance"
+    "bannerImage": "https://i.ibb.co.com/6JbLP1Yc/3.png",
+    "category": "Digital Marketing"
   },
   {
     "skillId": 4,
     "skillName": "Logo Design",
     "providerName": "Tania Rahman",
     "providerEmail": "tania@skillswap.com",
+    "providerImage": "https://i.ibb.co.com/m3WgVh8/team-3.webp",
     "price": 25,
     "rating": 4.2,
-    "slotsAvailable": 4,
-    "description": "Creative and professional logo design for startups and small businesses.",
+    "slotsAvailable": 17,
+    "description": "Learn how to create impactful and memorable logos using core design principles. This course covers brand identity, color psychology, typography, and logo concepts. You’ll work on real-world design projects and creative workflows. Ideal for beginners and aspiring graphic designers. By the end, you’ll be able to design professional logos that represent strong brand identities.",
     "image": "https://i.ibb.co.com/7JTr8HPm/Chat-GPT-Image-Jan-10-2026-10-24-59-AM.jpg",
-    "category": "Freelance"
+    "bannerImage": "https://i.ibb.co.com/XZk0fZKD/4.png",
+    "category": "Graphic Design"
   },
   {
     "skillId": 5,
     "skillName": "Content Writing & Copywriting",
     "providerName": "Fahim Chowdhury",
     "providerEmail": "fahim@skillswap.com",
+    "providerImage": "https://i.ibb.co.com/yBg5dXDP/cheerful-indian-businessman-smiling-closeup-portrait-jobs-career-campaign-53876-129417.jpg",
     "price": 15,
     "rating": 4.3,
-    "slotsAvailable": 6,
-    "description": "High‑quality content writing for blogs, websites, and marketing materials.",
+    "slotsAvailable": 10,
+    "description": "Learn how to write compelling content that informs, engages, and converts audiences. This course covers blog writing, website content, ad copy, and persuasive storytelling techniques. You’ll understand audience research, tone, and SEO-friendly writing. Ideal for beginners, marketers, and freelancers. By the end, you’ll confidently create high-quality content and copy that drives results.",
     "image": "https://i.ibb.co.com/DDHNc2GT/Chat-GPT-Image-Jan-10-2026-10-27-30-AM.jpg",
-    "category": "Freelance"
+    "bannerImage": "https://i.ibb.co.com/hRwXq681/5.png",
+    "category": "Digital Marketing"
   },
   {
     "skillId": 6,
     "skillName": "Video Editing & Motion Graphics",
     "providerName": "Arifa Sultana",
     "providerEmail": "arifa@skillswap.com",
+    "providerImage": "https://i.ibb.co.com/HD32yddz/team-7.webp",
     "price": 60,
     "rating": 4.0,
-    "slotsAvailable": 2,
-    "description": "Professional video editing and motion graphics for YouTube and social media.",
+    "slotsAvailable": 19,
+    "description": "Learn how to edit videos and create engaging motion graphics for digital platforms. This course covers video cutting, transitions, effects, text animation, and storytelling techniques. You’ll work with industry-standard tools to produce high-quality visual content. Ideal for beginners, content creators, and marketers. By the end, you’ll be able to create professional videos and dynamic motion graphics with confidence.",
     "image": "https://i.ibb.co.com/j9M05pn9/Chat-GPT-Image-Jan-10-2026-10-29-10-AM.jpg",
-    "category": "Freelance"
+    "bannerImage": "https://i.ibb.co.com/TDL324CY/6.png",
+    "category": "Video & Animation"
   },
   {
     "skillId": 7,
     "skillName": "Illustration & Digital Art",
     "providerName": "Ayesha Khan",
     "providerEmail": "ayeshakhan@skillswap.com",
+    "providerImage": "https://i.ibb.co.com/fzMccx7N/team-8.webp",
     "price": 40,
     "rating": 4.0,
-    "slotsAvailable": 3,
-    "description": "Custom illustrations and digital art for books, websites, and brands.",
+    "slotsAvailable": 7,
+    "description": "Learn how to create stunning digital illustrations using modern tools and techniques. This course covers sketching, coloring, shading, and character or concept design. You’ll develop your creative style while working on practical projects. Ideal for beginners and aspiring digital artists. By the end, you’ll be able to produce polished digital artwork with confidence.",
     "image": "https://i.ibb.co.com/QGrqYY2/Chat-GPT-Image-Jan-10-2026-10-31-00-AM.jpg",
-    "category": "Freelance"
+    "bannerImage": "https://i.ibb.co.com/G4NXXv9K/7.png",
+    "category": "Graphic Design"
   },
   {
     "skillId": 8,
@@ -93,34 +105,38 @@
     "providerImage": "https://i.ibb.co.com/cKF05ryL/team-4.webp",
     "price": 70,
     "rating": 4.9,
-    "slotsAvailable": 2,
-    "description": "Manage and grow social media accounts for businesses and influencers.",
+    "slotsAvailable": 20,
+    "description": "Learn how to plan, manage, and grow social media accounts effectively. This course covers content planning, scheduling, audience engagement, analytics, and platform strategies. You’ll gain practical skills to build brand presence and increase reach. Ideal for beginners, marketers, and entrepreneurs. By the end, you’ll be able to manage social media platforms confidently and professionally.",
     "image": "https://i.ibb.co.com/mrxY7WL4/Chat-GPT-Image-Jan-10-2026-10-35-49-AM.png",
-    "category": "Social Media"
+    "bannerImage": "https://i.ibb.co.com/3yS14xt0/8.png",
+    "category": "Digital Marketing"
   },
   {
     "skillId": 9,
     "skillName": "E‑commerce Store Setup",
     "providerName": "Zara Islam",
     "providerEmail": "zara@skillswap.com",
+    "providerImage": "https://i.ibb.co.com/Y9ZVkWd/medium-shot-woman-posing-indoors-23-2149915935.jpg",
     "price": 120,
     "rating": 4.7,
-    "slotsAvailable": 1,
-    "description": "Complete e‑commerce store setup with payment integration and product listing.",
+    "slotsAvailable": 11,
+    "description": "Learn how to build and launch a fully functional online store from scratch. This course covers product setup, payment gateways, shipping configuration, and store optimization. You’ll gain hands-on experience with user-friendly e-commerce tools and platforms. Ideal for beginners, entrepreneurs, and business owners. By the end, you’ll be able to create and manage a successful online store with confidence.",
     "image": "https://i.ibb.co.com/Qj6Y10vQ/Chat-GPT-Image-Jan-10-2026-10-37-16-AM.png",
-    "category": "Freelance"
+    "bannerImage": "https://i.ibb.co.com/ZzjbwZkX/9.png",
+    "category": "E-commerce"
   },
   {
     "skillId": 10,
     "skillName": "Mobile App UI/UX Design",
     "providerName": "Arhaan",
     "providerEmail": "arhaan@skillswap.com",
-    "providerImage": "https://skillhub-react.vercel.app/assets/imgs/team/team-6.webp",
+    "providerImage": "https://i.ibb.co.com/ZRnLTNRh/team-6.webp",
     "price": 80,
     "rating": 4.8,
-    "slotsAvailable": 3,
-    "description": "User‑friendly and modern UI/UX design for iOS and Android apps.",
+    "slotsAvailable": 15,
+    "description": "Learn how to design intuitive and visually appealing mobile app interfaces. This course covers user research, wireframing, prototyping, and usability principles. You’ll create user-centered designs using modern design tools and best practices. Ideal for beginners and aspiring designers. By the end, you’ll be able to design effective mobile app UI/UX experiences with confidence.",
     "image": "https://i.ibb.co.com/qF4XP7Hc/Chat-GPT-Image-Jan-10-2026-10-38-23-AM.png",
+    "bannerImage": "https://i.ibb.co.com/PZvfRDFF/10.png",
     "category": "UI/UX Design"
   },
   {
@@ -128,23 +144,27 @@
     "skillName": "Python Programming & Automation",
     "providerName": "Rafatul Islam",
     "providerEmail": "rafatul@skillswap.com",
+    "providerImage": "https://i.ibb.co.com/kgGLxds0/images-q-tbn-ANd9-Gc-SRFYe-MQOk-Yz-RSHr5k-Ac6-Kr-L8m-Wmlal-Xvzjow-s.jpg",
     "price": 90,
     "rating": 4.6,
-    "slotsAvailable": 2,
-    "description": "Python scripts for automation, web scraping, and data analysis tasks.",
+    "slotsAvailable": 6,
+    "description": "Learn how to code in Python and automate everyday tasks efficiently. This course covers Python fundamentals, data handling, scripting, and workflow automation. You’ll gain hands-on experience building practical projects that save time and improve productivity. Ideal for beginners, professionals, and tech enthusiasts. By the end, you’ll be able to write Python programs and automate tasks with confidence.",
     "image": "https://i.ibb.co.com/S7V6R6Kr/Chat-GPT-Image-Jan-10-2026-10-40-51-AM.png",
-    "category": "Freelance"
+    "bannerImage": "https://i.ibb.co.com/gbzYPZhY/11.png",
+    "category": "Programming"
   },
   {
     "skillId": 12,
     "skillName": "Email Marketing Automation",
     "providerName": "Minhaz Ali",
     "providerEmail": "minhaz@skillswap.com",
+    "providerImage": "https://i.ibb.co.com/Y4qHwwdc/images-q-tbn-ANd9-Gc-Sk-Y8-So6f-WNqd-U8-NGTrlu0y-PWSr-Pr-Qrp3f-XCg-s.jpg",
     "price": 65,
     "rating": 4.4,
-    "slotsAvailable": 4,
-    "description": "Design automated email sequences to boost engagement and sales.",
+    "slotsAvailable": 8,
+    "description": "Learn how to create effective email campaigns that engage and convert your audience. This course covers email strategy, automation workflows, segmentation, personalization, and performance analytics. You’ll gain hands-on experience with industry-standard tools to streamline marketing efforts. Ideal for beginners, marketers, and business owners. By the end, you’ll be able to run automated email campaigns that drive results with confidence.",
     "image": "https://i.ibb.co.com/NnLcGfx3/Chat-GPT-Image-Jan-10-2026-10-43-22-AM.png",
-    "category": "Freelance"
+    "bannerImage": "https://i.ibb.co.com/gbXxD4gw/12.png",
+    "category": "Digital Marketing"
   }
 ]

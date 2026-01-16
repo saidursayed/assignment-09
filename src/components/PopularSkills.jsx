@@ -13,10 +13,10 @@ const PopularSkills = ({ data }) => {
   }, []);
   return (
     <div>
-      <h2 className="text-center text-3xl font-bold mb-10">
+      <h2 className="text-center text-2xl md:text-3xl font-bold my-5 md:my-10">
        Explore Our Popular Courses
       </h2>
-      <div className="grid grid-cols-3 gap-5">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
         {data.map((skill) => (
           <SkillCard skill={skill} key={skill.skillId}></SkillCard>
         ))}

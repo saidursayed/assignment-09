@@ -50,9 +50,9 @@ const Login = () => {
   };
 
   return (
-    <div className="flex justify-center items-center ">
+    <div className="flex justify-center items-center m-0 my-5 md:my-10">
       <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl px-3 py-6">
-        <h2 className="font-semibold text-3xl text-center">
+        <h2 className="font-semibold text-2xl md:text-3xl text-center">
           Log in to your account
         </h2>
         <p className="text-gray-500 text-center font-medium mt-2 text-sm ">
